@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexEduPortal - Obligations & Contracts</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Header -->
+    <header class="top-header">
+        <div class="header-container">
+            <div class="brand">
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <i class="fas fa-gavel"></i>
+                    <span>LexEduPortal</span>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <button id="theme-toggle-btn" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button id="close-sidebar-btn" class="close-sidebar-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#profile-section" class="nav-item active"><i class="fas fa-user-graduate"></i> Student Profile</a>
+                <a href="#topics-section" class="nav-item"><i class="fas fa-book-open"></i> Core Topics</a>
+                <a href="#scenarios-section" class="nav-item"><i class="fas fa-balance-scale"></i> Scenario Practice</a>
+                <a href="#dictionary-section" class="nav-item"><i class="fas fa-search"></i> Legal Dictionary</a>
+                <a href="#flashcards-section" class="nav-item"><i class="fas fa-layer-group"></i> Flashcards</a>
+                <a href="#quiz-section" class="nav-item"><i class="fas fa-tasks"></i> Assessment Quiz</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Proposal 1: Interactive Student Profile Banner -->
+            <section id="profile-section" class="card profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-id-card"></i> Student Information</h2>
+                    <span class="badge">Proposal 1 Requirement</span>
+                </div>
+                <div class="card-body">
+                    <form id="student-profile-form" class="profile-grid">
+                        <div class="form-group">
+                            <label for="student-name">Full Name</label>
+                            <input type="text" id="student-name" placeholder="e.g. Juan Cruz" value="Juan Cruz">
+                        </div>
+                        <div class="form-group">
+                            <label for="student-number">Student Number</label>
+                            <input type="text" id="student-number" placeholder="e.g. 2024-10928-MN-0" value="2024-10928-MN-0">
+                        </div>
+                        <div class="form-group">
+                            <label for="student-course">Course & Program</label>
+                            <input type="text" id="student-course" placeholder="e.g. BS Business Administration" value="BS Business Administration">
+                        </div>
+                        <div class="form-group">
+                            <label for="year-level">Year Level</label>
+                            <select id="year-level">
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year" selected>2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="school-year">School Year</label>
+                            <input type="text" id="school-year" placeholder="e.g. 2025-2026" value="2025-2026">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject-name">Subject</label>
+                            <input type="text" id="subject-name" placeholder="e.g. Law on Obligations and Contracts" value="Law on Obligations and Contracts">
+                        </div>
+                    </form>
+                    <div class="profile-status">
+                        <span id="save-status-indicator"><i class="fas fa-check-circle"></i> Profile auto-saved to local storage</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Topics Section -->
+            <section id="topics-section" class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-book-reader"></i> Core Learning Modules</h2>
+                </div>
+                <div class="card-body">
+                    <div class="topic-tabs">
+                        <button class="tab-btn active" data-tab="tab-gen">General Provisions</button>
+                        <button class="tab-btn" data-tab="tab-sources">5 Sources</button>
+                        <button class="tab-btn" data-tab="tab-kinds">Kinds of Obligations</button>
+                        <button class="tab-btn" data-tab="tab-extinction">Extinction</button>
+                        <button class="tab-btn" data-tab="tab-contracts">Defective Contracts</button>
+                    </div>
+
+                    <div class="tab-content-container">
+                        <!-- Tab 1: General Provisions -->
+                        <div id="tab-gen" class="tab-panel active">
+                            <h3>General Provisions (Art. 1156)</h3>
+                            <p>An <strong>obligation</strong> is a juridical necessity to give, to do or not to do.</p>
+                            <div class="elements-grid">
+                                <div class="element-card">
+                                    <i class="fas fa-user-shield"></i>
+                                    <h4>Active Subject (Creditor/Obligee)</h4>
+                                    <p>The person who has the legal right to demand performance of the obligation.</p>
+                                </div>
+                                <div class="element-card">
+                                    <i class="fas fa-user-clock"></i>
+                                    <h4>Passive Subject (Debtor/Obligor)</h4>
+                                    <p>The person bound to perform the prestation or duty under penalty of law.</p>
+                                </div>
+                                <div class="element-card">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                    <h4>Prestation (Object)</h4>
+                                    <p>The particular conduct required (to give, to do, or not to do).</p>
+                                </div>
+                                <div class="element-card">
+                                    <i class="fas fa-link"></i>
+                                    <h4>Juridical Tie (Vinculum Juris)</h4>
+                                    <p>The efficient cause that binds the parties together legally.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Sources of Obligations -->
+                        <div id="tab-sources" class="tab-panel">
+                            <h3>5 Sources of Obligations (Art. 1157)</h3>
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">1. Law (Ex Lege) <i class="fas fa-chevron-down"></i></button>
+                                    <div class="accordion-body">
+                                        <p>Directly imposed by statute. Cannot be presumed; must be explicitly stated in the Civil Code or special laws.</p>
+                                        <p><em>Example: Duty of spouses to support each other; payment of income tax.</em></p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">2. Contracts (Ex Contractu) <i class="fas fa-chevron-down"></i></button>
+                                    <div class="accordion-body">
+                                        <p>Arise from the meeting of minds between two parties. Obligations arising from contracts have the force of law between the contracting parties (Art. 1159).</p>
+                                        <p><em>Example: Lease agreement to pay rent monthly.</em></p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">3. Quasi-Contracts (Ex Quasi-Contractu) <i class="fas fa-chevron-down"></i></button>
+                                    <div class="accordion-body">
+                                        <p>Lawful, voluntary, and unilateral acts based on the principle that no one shall be unjustly enriched at the expense of another.</p>
+                                        <ul>
+                                            <li><strong>Negotiorum Gestio:</strong> Voluntary management of another's abandoned business or property.</li>
+                                            <li><strong>Solutio Indebiti:</strong> Payment by mistake when there is no right to demand it.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">4. Acts or Omissions Punished by Law (Delicts / Crimes) <i class="fas fa-chevron-down"></i></button>
+                                    <div class="accordion-body">
+                                        <p>Civil liability arising from criminal offenses under Art. 100 of the Revised Penal Code.</p>
+                                        <p><em>Includes: Restitution, Reparation of damage, and Indemnification for consequential damages.</em></p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">5. Quasi-Delicts / Torts (Ex Quasi-Delicto) <i class="fas fa-chevron-down"></i></button>
+                                    <div class="accordion-body">
+                                        <p>Fault or negligence causing damage to another where there is no pre-existing contractual relation (Art. 2176).</p>
+                                        <p><em>Example: A reckless driver hitting a pedestrian crossing legally.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: Kinds of Obligations -->
+                        <div id="tab-kinds" class="tab-panel">
+                            <h3>Primary Classification of Obligations</h3>
+                            <div class="info-cards-grid">
+                                <div class="info-card">
+                                    <h4>Pure vs. Conditional</h4>
+                                    <p><strong>Pure:</strong> Demandable at once, not subject to any condition.</p>
+                                    <p><strong>Conditional:</strong> Acquisition or extinguishment depends upon a future and uncertain event.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4>With a Period / Term</h4>
+                                    <p>Performance depends upon the arrival of a day certain which must necessarily come.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Alternative vs. Facultative</h4>
+                                    <p><strong>Alternative:</strong> Debtor has several prestations, completely performing one discharges obligation.</p>
+                                    <p><strong>Facultative:</strong> Only one prestation agreed upon, but debtor may substitute another.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Joint vs. Solidary</h4>
+                                    <p><strong>Joint:</strong> Each debtor pays only their share; each creditor demands only theirs.</p>
+                                    <p><strong>Solidary:</strong> Each debtor liable for entire obligation; each creditor can claim all.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 4: Extinction -->
+                        <div id="tab-extinction" class="tab-panel">
+                            <h3>Modes of Extinguishing Obligations (Art. 1231)</h3>
+                            <div class="modes-list">
+                                <div class="mode-item"><strong>1. Payment or Performance:</strong> Complete delivery of object or fulfillment of service.</div>
+                                <div class="mode-item"><strong>2. Loss of the Thing Due:</strong> Specific object perishes without fault of debtor.</div>
+                                <div class="mode-item"><strong>3. Condonation / Remission:</strong> Gratuitous abandonment of right by creditor.</div>
+                                <div class="mode-item"><strong>4. Confusion / Merger:</strong> Characters of creditor and debtor merged in one person.</div>
+                                <div class="mode-item"><strong>5. Compensation:</strong> Two persons are mutual debtors and creditors of each other.</div>
+                                <div class="mode-item"><strong>6. Novation:</strong> Substitution or modification of an obligation by a subsequent valid one.</div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 5: Defective Contracts -->
+                        <div id="tab-contracts" class="tab-panel">
+                            <h3>4 Classes of Defective Contracts</h3>
+                            <div class="defective-grid">
+                                <div class="defective-card rescissible">
+                                    <h4>1. Rescissible Contracts</h4>
+                                    <span class="status-tag">Valid until Rescinded</span>
+                                    <p>Valid contract but causes economic lesion or financial damage to a party or third person.</p>
+                                    <small>Example: Contracts entered into in fraud of creditors.</small>
+                                </div>
+                                <div class="defective-card voidable">
+                                    <h4>2. Voidable Contracts</h4>
+                                    <span class="status-tag">Valid until Annulled</span>
+                                    <p>Binding until annulled by court. Defect lies in vitiated consent (Mistake, Violence, Intimidation, Undue Influence, Fraud).</p>
+                                </div>
+                                <div class="defective-card unenforceable">
+                                    <h4>3. Unenforceable Contracts</h4>
+                                    <span class="status-tag">Cannot be Enforced in Court</span>
+                                    <p>Cannot be sued upon unless ratified. Includes agreements failing Statute of Frauds or unauthorized acts.</p>
+                                </div>
+                                <div class="defective-card void">
+                                    <h4>4. Void or Inexistent</h4>
+                                    <span class="status-tag">No Legal Effect At All</span>
+                                    <p>Produces no legal effect from beginning ($nulum$). Cannot be ratified or validated by passage of time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Scenario Analyzer -->
+            <section id="scenarios-section" class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-balance-scale-right"></i> Real-Life Scenario Practice</h2>
+                </div>
+                <div class="card-body">
+                    <p>Select a scenario below to analyze real-world applications of law:</p>
+                    <div class="scenario-controls">
+                        <select id="scenario-selector" class="select-input">
+                            <option value="0">Case 1: Solutio Indebiti (Bank Transfer Error)</option>
+                            <option value="1">Case 2: Fortuitous Event & Loss of Specific Thing</option>
+                            <option value="2">Case 3: Solidary Liability in Business Loans</option>
+                        </select>
+                    </div>
+
+                    <div id="scenario-display-card" class="scenario-box">
+                        <h4 id="scenario-title">Loading scenario...</h4>
+                        <p id="scenario-text">Scenario details will appear here.</p>
+                        
+                        <div class="user-analysis-section">
+                            <label for="user-reasoning">Your Legal Verdict & Explanation:</label>
+                            <textarea id="user-reasoning" placeholder="Type your answer here based on civil code rules..."></textarea>
+                            <button id="check-scenario-btn" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit & View Expert Rule</button>
+                        </div>
+
+                        <div id="scenario-feedback" class="feedback-box hidden">
+                            <div class="feedback-title"><i class="fas fa-lightbulb"></i> Expert Legal Analysis:</div>
+                            <div id="scenario-expert-text">...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Legal Dictionary & Search Filter -->
+            <section id="dictionary-section" class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-search"></i> Legal Term Dictionary</h2>
+                    <input type="text" id="dict-search-input" placeholder="Search terms (e.g. Mora, Dolo, Fortuitous)..." class="search-input">
+                </div>
+                <div class="card-body">
+                    <div id="dictionary-grid" class="dictionary-grid">
+                        <!-- Dynamic items rendered by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Flashcards -->
+            <section id="flashcards-section" class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-layer-group"></i> Study Flashcards</h2>
+                    <div class="flashcard-counter">
+                        <span id="fc-index">1</span> / <span id="fc-total">5</span>
+                    </div>
+                </div>
+                <div class="card-body flashcard-container">
+                    <div id="flashcard" class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <span class="card-category" id="fc-category">Category</span>
+                                <h3 id="fc-question">Flashcard Question Title</h3>
+                                <p class="flip-hint"><i class="fas fa-redo"></i> Click card to reveal answer</p>
+                            </div>
+                            <div class="flashcard-back">
+                                <h3>Answer & Rule:</h3>
+                                <p id="fc-answer">Answer text goes here...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard-controls">
+                        <button id="prev-fc-btn" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button id="mastered-fc-btn" class="btn btn-success"><i class="fas fa-check"></i> Mark Mastered</button>
+                        <button id="next-fc-btn" class="btn btn-secondary">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Self-Assessment Quiz -->
+            <section id="quiz-section" class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-vial"></i> Self-Assessment Quiz</h2>
+                    <span id="quiz-score-badge" class="badge">Score: 0 / 0</span>
+                </div>
+                <div class="card-body">
+                    <div id="quiz-container">
+                        <div class="quiz-progress-bar">
+                            <div id="quiz-progress-fill" class="quiz-progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <h3 id="quiz-question-title">Quiz Question Loading...</h3>
+                        <div id="quiz-options-container" class="options-group">
+                            <!-- Rendered dynamically -->
+                        </div>
+                        
+                        <div id="quiz-explanation" class="quiz-explanation hidden"></div>
+
+                        <div class="quiz-actions">
+                            <button id="next-quiz-btn" class="btn btn-primary hidden">Next Question <i class="fas fa-chevron-right"></i></button>
+                            <button id="reset-quiz-btn" class="btn btn-secondary"><i class="fas fa-sync"></i> Reset Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p><strong>LexEduPortal</strong> &copy; 2026 | Obligations and Contracts Educational Web Platform</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
